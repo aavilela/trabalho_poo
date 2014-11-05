@@ -1,0 +1,3 @@
+- cabar cinto
+- pilha
+- tratar saida dos efeitos ex.: CURA = "CURA"
