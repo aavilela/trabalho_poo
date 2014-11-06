@@ -1,13 +1,25 @@
 #include "casa.h"
 
 const int VAZIO = 0;
+const int CHAO_TIPO = 1;
+const int MURO_TIPO= 2; 
+const int SAIDA_TIPO= 3;
+const int ENTRADA_TIPO = 4; 
+
+const char CHAO_SPRITE = '.';
+const char MURO_SPRITE = '#';
+const char SAIDA_SPRITE = '.';
+const char ENTRADA_SPRITE = '.';
 
 Casa::Casa()
 {
-	estado = VAZIO;
+	setEstado(VAZIO);
+	setTipo(CHAO_TIPO);
+	setSprite(CHAO_SPRITE);
 }
 
-int Casa::CheckEstado(){
+int Casa::CheckEstado()
+{
 	return getEstado();		
 }
 
@@ -21,9 +33,19 @@ void Casa::setEstado(int est)
 	this->estado = est;
 }
 
+int Casa::getTipo()
+{
+	return tipo;
+}
+
+void Casa::setTipo(int tipo)
+{
+	this->tipo = tipo;
+}
+
 char Casa::getSprite()
 {
-	return sprite;
+	return this->sprite;
 }
 
 void Casa::setSprite(char sprite)

@@ -14,7 +14,7 @@ void Tela::Render(Mapa mapa)
 	{
 		for (j = 0; j < mapa.getTam(); j++)
 		{
-			std::cout << mapa.getCasa()[i][j].getSprite();
+			std::cout << mapa.getCasa()[i * mapa.getTam() + j].getSprite() << " ";
 		}
 		std::cout << std::endl;
 	}

@@ -12,16 +12,9 @@ Mapa::Mapa(std::string nome, int tam)
 {
 	setNome(nome);
 	setTam(tam);
-	getCasa() = new std::vector<Casa>(tam, std::vector<Casa>(tam));
-	/*getCasa().resize(getTam());
-	for (int i = 0; i < tam; i++)
-	{
-		getCasa()[i].resize(getTam());
-		std::cout << "ok" << std::endl;
-	}*/
-
+	casas = new Casa[tam *tam];
 	GeraSaida();
-	CriaChao();
+	//CriaChao();
 	CriaMuro();
 }
 
@@ -47,7 +40,7 @@ void Mapa::CriaChao()
 	{
 		for (int j = 0; j < tam; j++)
 		{
-			getCasa()[i][j].setSprite('.');
+			getCasa()[i * tam + j].setTipo(CHAO_TIPO);
 		}
 	}
 }
@@ -56,7 +49,8 @@ void Mapa::CriaMuro()
 {
 	for (int j = 0; j < tam; j++)
 	{
-		getCasa()[0][j].setSprite('#');
+		getCasa()[j].setSprite(MURO_SPRITE);
+		getCasa()[j].setTipo(MURO_TIPO);	
 	}
 }
 
@@ -90,9 +84,9 @@ void Mapa::setTam(int tam)
 	this->tam = tam;
 }
 
-std::vector<std::vector<Casa> > Mapa::getCasa()
+Casa * Mapa::getCasa()
 {
-	return this->casas;
+	return casas;
 }
 
 Posicao Mapa::getPosSaida()

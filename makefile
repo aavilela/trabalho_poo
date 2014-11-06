@@ -1,6 +1,7 @@
-objs = posicao.o main.o casa.o mapa.o mob.o \
-	inimigo.o elemento.o arma.o pocao.o cinto.o \
-	tela.o nivel.o
+objs =	main.o posicao.o casa.o mapa.o nivel.o \
+        mob.o inimigo.o cinto.o \
+	elemento.o arma.o pocao.o  \
+	tela.o 
 
 jogoRPG: $(objs) 
 	g++ $(objs) -o jogoRPG

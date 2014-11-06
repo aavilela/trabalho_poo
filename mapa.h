@@ -23,7 +23,7 @@ class Mapa
 		void setNome(std::string);
 		int getTam();
 		void setTam(int);
-		std::vector<std::vector<Casa> > getCasa();
+		Casa *getCasa();
 		void setCasa(Casa);
 		Posicao getPosSaida();
 		void setPosSaida(Posicao);
@@ -32,7 +32,7 @@ class Mapa
 	private:
 		std::string nome;
 		int tam;
-		std::vector< std::vector<Casa> > casas;
+		Casa *casas;
 		Posicao posSaida;
 		Posicao posEntrada;
 };
