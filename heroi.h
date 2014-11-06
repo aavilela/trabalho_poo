@@ -3,7 +3,8 @@
 
 #include "mob.h"
 #include "elemento.h"
-#include "arma.h"
+#include "mochila.h"
+#include "cinto.h"
 
 class Heroi : public Mob
 {
@@ -13,14 +14,14 @@ class Heroi : public Mob
 
 		Cinto getCinto();
 		void setCinto(Cinto);
-		//Mochila getMochila();
-		//void setMochila(Mochila);
+		Mochila getMochila();
+		void setMochila(Mochila);
 		Arma getArmaEqp();
 		void setArmaEqp(Arma);
 	private:
 		Cinto cinto;
-		//Mochila mochila;
+		Mochila mochila;
 		Arma armaEqp;
-}
+};
 
 #endif // HEROI_H

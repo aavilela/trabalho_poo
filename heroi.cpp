@@ -31,3 +31,13 @@ void Heroi::setArmaEqp(Arma arma)
 {
 	this->armaEqp = arma;
 }
+
+Mochila Heroi::getMochila()
+{
+	return mochila;
+}
+
+void Heroi::setMochila(Mochila mochila)
+{
+	this->mochila = mochila;
+}

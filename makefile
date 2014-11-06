@@ -1,5 +1,5 @@
 objs =	main.o posicao.o casa.o mapa.o nivel.o \
-        mob.o inimigo.o cinto.o pilha.o mochila.o \
+        mob.o inimigo.o heroi.o cinto.o pilha.o mochila.o \
 	elemento.o arma.o pocao.o  \
 	tela.o 
 
@@ -15,6 +15,7 @@ nivel.o: nivel.h
 
 mob.o: mob.h
 inimigo.o: inimigo.h
+heroi.o: heroi.h
 cinto.o: cinto.h
 pilha.o: pilha.h
 mochila.o: mochila.h
