@@ -12,7 +12,7 @@ class Mapa
 		Mapa(std::string, int);
 		int GeraMapa();
 		void GeraSaida();
-		int GeraEntrada();
+		void GeraEntrada();
 		void CriaChao();
 		void CriaMuro();
 		bool CheckSaida(Posicao);

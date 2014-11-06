@@ -13,9 +13,10 @@ Mapa::Mapa(std::string nome, int tam)
 	setNome(nome);
 	setTam(tam);
 	casas = new Casa[tam *tam];
-	GeraSaida();
 	//CriaChao();
 	CriaMuro();
+	GeraSaida();
+	GeraEntrada();
 }
 
 /*
@@ -24,14 +25,26 @@ Mapa::Mapa(std::string nome, int tam)
  */
 void Mapa::GeraSaida()
 {
-	srand(time(NULL));
-	int ind =  ( rand() % (20 - 10 +1));
-	std::cout << ind << std::endl;
+	srand(time(NULL) + 100);
+	int ind = 1 + ( rand() % (getTam() - 3));
 	Posicao saida(ind, getTam());
-
 	setPosSaida(saida);	
+	int x = getPosSaida().getX();
+	int y = getPosSaida().getY();
+	int pos = ind * getTam() + (getTam() - 1);
+	getCasa()[pos].setSprite(SAIDA_SPRITE);
+	getCasa()[pos].setTipo(SAIDA_TIPO);
+	
+}
 
-	getPosSaida().Imprime();
+void Mapa::GeraEntrada()
+{
+	srand(time(NULL));
+	int ind = 1 + ( rand() % (getTam() - 3));
+	int pos = ind * getTam() + 0;
+	getCasa()[pos].setSprite(SAIDA_SPRITE);
+	getCasa()[pos].setTipo(SAIDA_TIPO);
+	
 }
 
 void Mapa::CriaChao()
@@ -49,8 +62,22 @@ void Mapa::CriaMuro()
 {
 	for (int j = 0; j < tam; j++)
 	{
+		// Primeira linha
 		getCasa()[j].setSprite(MURO_SPRITE);
 		getCasa()[j].setTipo(MURO_TIPO);	
+
+		// Última linha
+		getCasa()[(tam - 1) * tam + j].setSprite(MURO_SPRITE);
+		getCasa()[(tam - 1) * tam + j].setTipo(MURO_TIPO);
+
+		// Coluna direita
+		getCasa()[tam * j + (tam - 1)].setSprite(MURO_SPRITE);
+		getCasa()[tam * j + (tam - 1)].setTipo(MURO_TIPO);
+
+		// Coluna esquerda
+		getCasa()[tam * j ].setSprite(MURO_SPRITE);
+		getCasa()[tam * j ].setTipo(MURO_TIPO);
+
 	}
 }
 
