@@ -13,7 +13,7 @@ class Mapa
 		int GeraMapa();
 		void GeraSaida();
 		void GeraEntrada();
-		void CriaChao();
+		//void CriaChao();
 		void CriaMuro();
 		bool CheckSaida(Posicao);
 		bool CheckEntrada(Posicao);
@@ -33,6 +33,7 @@ class Mapa
 		std::string nome;
 		int tam;
 		Casa *casas;
+		// Inutil por enquanto
 		Posicao posSaida;
 		Posicao posEntrada;
 };

@@ -9,6 +9,7 @@ Tela::Tela()
 void Tela::Render(Mapa mapa)
 {
 
+	std::cout << "Nivel: " << mapa.getNome() << std::endl  << std::endl;
 	int i, j;
 	for (i = 0; i < mapa.getTam(); i++)
 	{

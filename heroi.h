@@ -3,6 +3,7 @@
 
 #include "mob.h"
 #include "elemento.h"
+#include "arma.h"
 
 class Heroi : public Mob
 {

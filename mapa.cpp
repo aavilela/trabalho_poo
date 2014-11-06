@@ -13,7 +13,6 @@ Mapa::Mapa(std::string nome, int tam)
 	setNome(nome);
 	setTam(tam);
 	casas = new Casa[tam *tam];
-	//CriaChao();
 	CriaMuro();
 	GeraSaida();
 	GeraEntrada();
@@ -45,17 +44,6 @@ void Mapa::GeraEntrada()
 	getCasa()[pos].setSprite(SAIDA_SPRITE);
 	getCasa()[pos].setTipo(SAIDA_TIPO);
 	
-}
-
-void Mapa::CriaChao()
-{
-	for (int i = 0; i < tam; i++)
-	{
-		for (int j = 0; j < tam; j++)
-		{
-			getCasa()[i * tam + j].setTipo(CHAO_TIPO);
-		}
-	}
 }
 
 void Mapa::CriaMuro()

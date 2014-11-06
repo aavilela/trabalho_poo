@@ -7,6 +7,9 @@ class Arma: public Elemento
 {
 	public:
 		Arma();
+
+		int getAtaque();
+		void setAtaque(int);
 	private:
 		int ataque;
 };

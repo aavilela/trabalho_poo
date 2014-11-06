@@ -2,7 +2,9 @@
 
 Heroi::Heroi()
 {
-	// ctor
+	Arma espada;
+	espada.setAtaque(15);
+	setArmaEqp(espada);
 }
 
 int Heroi::UsarElemento(Elemento elem)
