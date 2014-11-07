@@ -4,8 +4,12 @@
 
 Mapa::Mapa()
 {
-	nome = "default";
-	tam = 8;
+	setNome("Mundo random");
+	setTam(15);
+	casas = new Casa[getTam() * getTam()];
+	CriaMuro();
+	GeraSaida();
+	GeraEntrada();
 }
 
 Mapa::Mapa(std::string nome, int tam)
@@ -26,7 +30,7 @@ void Mapa::GeraSaida()
 {
 	srand(time(NULL) + 100);
 	int ind = 1 + ( rand() % (getTam() - 3));
-	Posicao saida(ind, getTam());
+	Posicao saida(ind, getTam() - 1);
 	setPosSaida(saida);	
 	int x = getPosSaida().getX();
 	int y = getPosSaida().getY();
@@ -40,10 +44,14 @@ void Mapa::GeraEntrada()
 {
 	srand(time(NULL));
 	int ind = 1 + ( rand() % (getTam() - 3));
+	Posicao entrada(ind, 0);
+	setPosEntrada(entrada);
+	int x = getPosEntrada().getX();
+	int y = getPosEntrada().getY();
+
 	int pos = ind * getTam() + 0;
-	getCasa()[pos].setSprite(SAIDA_SPRITE);
-	getCasa()[pos].setTipo(SAIDA_TIPO);
-	
+	getCasa()[pos].setSprite(ENTRADA_SPRITE);
+	getCasa()[pos].setTipo(ENTRADA_TIPO); 
 }
 
 void Mapa::CriaMuro()
@@ -112,4 +120,14 @@ Posicao Mapa::getPosSaida()
 void Mapa::setPosSaida(Posicao pos)
 {
 	this->posSaida = pos;	
+}
+
+Posicao Mapa::getPosEntrada()
+{
+	return posEntrada;
+}
+
+void Mapa::setPosEntrada(Posicao pos)
+{
+	this->posEntrada = pos;
 }

@@ -1,4 +1,4 @@
-objs =	main.o posicao.o casa.o mapa.o nivel.o \
+objs =	main.o posicao.o casa.o mapa.o nivel.o gernivel.o \
         mob.o inimigo.o heroi.o cinto.o pilha.o mochila.o \
 	elemento.o arma.o pocao.o  \
 	tela.o 
@@ -12,6 +12,7 @@ posicao.o: posicao.h
 casa.o: casa.h
 mapa.o: mapa.h
 nivel.o: nivel.h
+gernivel.o: gernivel.h
 
 mob.o: mob.h
 inimigo.o: inimigo.h

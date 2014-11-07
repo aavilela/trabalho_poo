@@ -6,60 +6,80 @@
 #include "mochila.h"
 #include "heroi.h"
 #include "casa.h"
+#include "gernivel.h"
 
 int main(void)
 {
-
-	Mapa mapa("Primeiro Mundo", 15);
 	Tela tela;
 	Heroi heroi;
-	std::cout << heroi.getX() << std::endl;
-	
+
+	Mapa mapa1("Primeiro Mundo", 15);
+	Mapa mapa2("Segundo Mundo", 8);
+	Mapa mapa = mapa1;
+
+	tela.Render(mapa, heroi);
 	char opcao;
+
 	do
 	{
+		
 		int y = heroi.getY();
 		int x = heroi.getX();
 
-		tela.Render(mapa, heroi);
+		char tipoCasa;
+
 		std::cin >> opcao;	
 		switch (opcao)
 		{
 			case 'w':
 			{
 				x--;
-				char tipo = mapa.getCasa()[x * mapa.getTam() + y].getTipo();
-				if( tipo != MURO_TIPO)
+				tipoCasa = mapa.getCasa()[x * mapa.getTam() + y].getTipo();
+				if( tipoCasa != MURO_TIPO)
 					heroi.setX(x);
 				break;
 			}
 			case 's':
 			{
 				x++;
-				char tipo = mapa.getCasa()[x * mapa.getTam() + y].getTipo();
-				if( tipo != MURO_TIPO)
+				tipoCasa = mapa.getCasa()[x * mapa.getTam() + y].getTipo();
+				if( tipoCasa != MURO_TIPO)
 					heroi.setX(x);
 				break;
 			}
 			case 'a':
 			{
 				y--;
-				char tipo = mapa.getCasa()[x * mapa.getTam() + y].getTipo();
-				if( tipo != MURO_TIPO)
+				tipoCasa = mapa.getCasa()[x * mapa.getTam() + y].getTipo();
+				if( tipoCasa != MURO_TIPO)
 					heroi.setY(y);
 				break;
 			}
 			case 'd':
 			{
 				y++;
-				char tipo = mapa.getCasa()[x * mapa.getTam() + y].getTipo();
-				if( tipo != MURO_TIPO)
+				tipoCasa = mapa.getCasa()[x * mapa.getTam() + y].getTipo();
+				if( tipoCasa != MURO_TIPO)
 					heroi.setY(y);
-
 				break;
 			}
 
 		}
+		if ( tipoCasa == SAIDA_TIPO)
+		{
+			mapa = mapa2;
+			heroi.setX( mapa.getPosEntrada().getX() );
+			heroi.setY( mapa.getPosEntrada().getY() );
+		}
+		if ( tipoCasa == ENTRADA_TIPO) {
+			mapa = mapa1;
+			std::cout << mapa.getPosSaida().getX() << std::endl;
+			std::cout << mapa.getPosSaida().getY() << std::endl;
+			heroi.setX( mapa.getPosSaida().getX() );
+			heroi.setY( mapa.getPosSaida().getY() );
+		}
+
+		tela.Render(mapa, heroi);
 	}while(opcao != 'q');
 	
 	return 0;
