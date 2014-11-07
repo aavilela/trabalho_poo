@@ -12,6 +12,10 @@ class Mob
 		int Ataca(Mob);
 		int Move(Posicao);
 
+		int getX();
+		void setX(int);
+		int getY();
+		void setY(int);
 		std::string getNome();
 		void setNome(std::string);
 		Posicao getPos();
@@ -21,9 +25,10 @@ class Mob
 		void setAtaque(int);
 		int getDefesa();
 		void setDefesa(int);
-	private:
+	protected:
 		std::string nome;
-		Posicao pos;
+		int x, y;
+		//Posicao pos;
 		int vida;
 		int ataque;
 		int defesa;

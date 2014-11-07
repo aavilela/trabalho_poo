@@ -14,7 +14,7 @@ class Posicao
 		void setX(int x);
 		int getY();
 		void setY(int);
-	private:
+	protected:
 		int x;
 		int y;
 };

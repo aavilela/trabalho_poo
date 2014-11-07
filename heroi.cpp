@@ -1,15 +1,26 @@
 #include "heroi.h"
 
-Heroi::Heroi()
-{
+Heroi::Heroi() 
+{	
 	Arma espada;
 	espada.setAtaque(15);
-	setArmaEqp(espada);
+	setArmaEqp(espada);	
+	setSprite('H');
 }
 
 int Heroi::UsarElemento(Elemento elem)
 {
 	//
+}
+
+char Heroi::getSprite()
+{
+	return sprite;
+}
+
+void Heroi::setSprite(char sprite)
+{
+	this->sprite = sprite;
 }
 
 Cinto Heroi::getCinto()

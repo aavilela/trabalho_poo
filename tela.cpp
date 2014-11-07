@@ -6,7 +6,7 @@ Tela::Tela()
 	// ctor
 }
 
-void Tela::Render(Mapa mapa)
+void Tela::Render(Mapa mapa, Heroi heroi)
 {
 
 	std::cout << "Nivel: " << mapa.getNome() << std::endl  << std::endl;
@@ -15,8 +15,16 @@ void Tela::Render(Mapa mapa)
 	{
 		for (j = 0; j < mapa.getTam(); j++)
 		{
-			std::cout << mapa.getCasa()[i * mapa.getTam() + j].getSprite() << " ";
+			if (i == heroi.getX() && j == heroi.getY())
+			{
+				std::cout << heroi.getSprite() << " ";
+			}
+			else 
+			{
+				std::cout << mapa.getCasa()[i * mapa.getTam() + j].getSprite() << " ";
+			}
 		}
 		std::cout << std::endl;
 	}
+	
 }

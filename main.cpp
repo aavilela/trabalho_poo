@@ -4,24 +4,63 @@
 
 #include "tela.h"
 #include "mochila.h"
+#include "heroi.h"
+#include "casa.h"
 
 int main(void)
 {
-	/*Mapa mapa("O mundo de xanao", 30);
+
+	Mapa mapa("Primeiro Mundo", 15);
 	Tela tela;
-	tela.Render(mapa);
-	*/
+	Heroi heroi;
+	std::cout << heroi.getX() << std::endl;
+	
+	char opcao;
+	do
+	{
+		int y = heroi.getY();
+		int x = heroi.getX();
 
-	Mochila moch;
-	Arma arma1;
-	Arma arma2;
-	Arma arma3;
-	Arma arma4;
-	moch.Add(arma1);
-	moch.Add(arma2);
-	moch.Add(arma3);
-	moch.Add(arma4);
-	std::cout << moch.getPeso() << std::endl;
+		tela.Render(mapa, heroi);
+		std::cin >> opcao;	
+		switch (opcao)
+		{
+			case 'w':
+			{
+				x--;
+				char tipo = mapa.getCasa()[x * mapa.getTam() + y].getTipo();
+				if( tipo != MURO_TIPO)
+					heroi.setX(x);
+				break;
+			}
+			case 's':
+			{
+				x++;
+				char tipo = mapa.getCasa()[x * mapa.getTam() + y].getTipo();
+				if( tipo != MURO_TIPO)
+					heroi.setX(x);
+				break;
+			}
+			case 'a':
+			{
+				y--;
+				char tipo = mapa.getCasa()[x * mapa.getTam() + y].getTipo();
+				if( tipo != MURO_TIPO)
+					heroi.setY(y);
+				break;
+			}
+			case 'd':
+			{
+				y++;
+				char tipo = mapa.getCasa()[x * mapa.getTam() + y].getTipo();
+				if( tipo != MURO_TIPO)
+					heroi.setY(y);
 
+				break;
+			}
+
+		}
+	}while(opcao != 'q');
+	
 	return 0;
 }

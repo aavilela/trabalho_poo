@@ -9,9 +9,11 @@
 class Heroi : public Mob
 {
 	public:
-		Heroi();
+		Heroi(); 
 		int UsarElemento(Elemento);
 
+		char getSprite();
+		void setSprite(char);
 		Cinto getCinto();
 		void setCinto(Cinto);
 		Mochila getMochila();
@@ -19,6 +21,7 @@ class Heroi : public Mob
 		Arma getArmaEqp();
 		void setArmaEqp(Arma);
 	private:
+		char sprite;
 		Cinto cinto;
 		Mochila mochila;
 		Arma armaEqp;

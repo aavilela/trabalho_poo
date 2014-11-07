@@ -2,7 +2,10 @@
 #include "posicao.h" 
 
 // Construtor
-Posicao::Posicao() {}
+Posicao::Posicao() 
+{
+	// ctor
+}
 
 Posicao::Posicao(int x, int y)
 {

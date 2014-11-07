@@ -2,12 +2,13 @@
 #define TELA_H
 
 #include "mapa.h"
+#include "heroi.h"
 
 class Tela
 {
 	public:
 		Tela();
-		void Render(Mapa);
+		void Render(Mapa, Heroi);
 	private:
 };
 
