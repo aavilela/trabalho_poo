@@ -4,8 +4,8 @@
 
 Mapa::Mapa()
 {
+	setTam(10 + (rand() % 10));
 	setNome("Mundo random");
-	setTam(15);
 	casas = new Casa[getTam() * getTam()];
 	CriaMuro();
 	GeraSaida();
@@ -22,13 +22,8 @@ Mapa::Mapa(std::string nome, int tam)
 	GeraEntrada();
 }
 
-/*
- * Gera um posição em uma das casas da ultima coluna da matriz
- * que assumirá o papel de saida do nível
- */
 void Mapa::GeraSaida()
 {
-	srand(time(NULL) + 100);
 	int ind = 1 + ( rand() % (getTam() - 3));
 	Posicao saida(ind, getTam() - 1);
 	setPosSaida(saida);	
@@ -42,7 +37,6 @@ void Mapa::GeraSaida()
 
 void Mapa::GeraEntrada()
 {
-	srand(time(NULL));
 	int ind = 1 + ( rand() % (getTam() - 3));
 	Posicao entrada(ind, 0);
 	setPosEntrada(entrada);

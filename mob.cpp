@@ -1,16 +1,22 @@
 #include <iostream>
 
 #include "mob.h"
+#include "mapa.h"
 
 Mob::Mob()
 {
-	//pos = Posicao();
+	pos = Posicao(0, 0);
 	setNome("nenhum");
 	setVida(100);
 	setX(2);
 	setY(2);
 	setAtaque(20);
 	setDefesa(10);
+}
+
+int Mob::Mover(Posicao pos)
+{
+
 }
 
 int Mob::getX()
@@ -43,10 +49,10 @@ void Mob::setNome(std::string str)
 	this->nome = str;
 }
 
-/*Posicao Mob::getPos()
+Posicao Mob::getPos()
 {
 	return pos;
-}*/
+}
 
 int Mob::getVida()
 {

@@ -10,7 +10,7 @@ class Mob
 	public:
 		Mob();
 		int Ataca(Mob);
-		int Move(Posicao);
+		int Mover(Posicao);
 
 		int getX();
 		void setX(int);
@@ -28,7 +28,7 @@ class Mob
 	protected:
 		std::string nome;
 		int x, y;
-		//Posicao pos;
+		Posicao pos;
 		int vida;
 		int ataque;
 		int defesa;

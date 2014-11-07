@@ -1,5 +1,6 @@
 #include "mochila.h"
 
+
 const int PESO_MAX = 15;
 
 Mochila::Mochila()
@@ -30,4 +31,10 @@ int Mochila::getPeso()
 void Mochila::setPeso(int peso)
 {
 	this->peso = peso;
+}
+
+void Mochila::Imprimir()
+{
+	std::cout << std::endl << "======MOCHILA======" << std::endl;
+	pilha.Imprimir();
 }

@@ -1,8 +1,8 @@
 #ifndef TELA_H
 #define TELA_H
 
-#include "mapa.h"
 #include "heroi.h"
+#include "nivel.h"
 
 class Tela
 {

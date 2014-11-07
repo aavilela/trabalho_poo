@@ -12,7 +12,8 @@ int Cinto::GuardarPocao(Pocao poc)
 {
 	if (qtd < 5)
 	{
-		pocoes[qtd++] = poc;
+		pocoes[qtd] = poc;
+		IncremQtd();		
 		return 1;
 	}
 	else{
@@ -41,7 +42,7 @@ Pocao Cinto::RemoverPocao(int ind)
 int Cinto::CheckDisp(int efeito)
 {
 	int i;
-	for (i = 0; i <= qtd - 1; i++)
+	for (i = 0; i < qtd  ; i++)
 	{
 		if (pocoes[i].getEfeito() == efeito)
 		{
@@ -55,10 +56,24 @@ int Cinto::CheckDisp(int efeito)
 	return NAO_ACHOU;
 }
 
-// dando erro
-Pocao Cinto::getPocoes()
+void Cinto::Imprimir()
 {
-	return pocoes[0];
+	std::cout << "CINTO: ";
+	if( qtd > 0 ) std::cout << "===";
+	else std::cout << "Vazio";
+	for(int i = 0; i < qtd; i++)
+	{
+		std::cout << "[" << getPocoes(i).TrataEfeito() << "]=";
+	}
+	if( qtd != 0 )std::cout << "===" << std::endl;
+	else std::cout << std::endl;
+	std::cout << std::endl;
+}
+
+// dando erro
+Pocao Cinto::getPocoes(int ind)
+{
+	return pocoes[ind];
 }
 
 void Cinto::setPocoes(Pocao poc, int ind)

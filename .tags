@@ -1,0 +1,141 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ARMA_H	arma.h	2;"	d
+AUM_ATAQUE	pocao.cpp	/^const int AUM_ATAQUE = 1; $/;"	v
+AUM_DEFESA	pocao.cpp	/^const int AUM_DEFESA = 2; $/;"	v
+Arma	arma.cpp	/^Arma::Arma()$/;"	f	class:Arma
+Arma	arma.h	/^class Arma: public Elemento$/;"	c
+CASA_H	casa.h	2;"	d
+CINTO_H	cinto.h	2;"	d
+CURA	pocao.cpp	/^const int CURA = 0;$/;"	v
+Casa	casa.cpp	/^Casa::Casa()$/;"	f	class:Casa
+Casa	casa.h	/^class Casa$/;"	c
+CheckDisp	cinto.cpp	/^int Cinto::CheckDisp(int efeito)$/;"	f	class:Cinto
+CheckEstado	casa.cpp	/^int Casa::CheckEstado(){$/;"	f	class:Casa
+CheckSaida	mapa.cpp	/^bool Mapa::CheckSaida(Posicao posHeroi)$/;"	f	class:Mapa
+Cinto	cinto.cpp	/^Cinto::Cinto()$/;"	f	class:Cinto
+Cinto	cinto.h	/^class Cinto$/;"	c
+Compara	posicao.cpp	/^bool Posicao::Compara(Posicao pos)$/;"	f	class:Posicao
+CriaChao	mapa.cpp	/^void Mapa::CriaChao()$/;"	f	class:Mapa
+CriaMuro	mapa.cpp	/^void Mapa::CriaMuro()$/;"	f	class:Mapa
+DecremQtd	cinto.cpp	/^void Cinto::DecremQtd()$/;"	f	class:Cinto
+ELEMENTO_H	elemento.h	2;"	d
+Elemento	elemento.cpp	/^Elemento::Elemento()$/;"	f	class:Elemento
+Elemento	elemento.h	/^class Elemento$/;"	c
+GeraSaida	mapa.cpp	/^void Mapa::GeraSaida()$/;"	f	class:Mapa
+GuardarPocao	cinto.cpp	/^int Cinto::GuardarPocao(Pocao poc)$/;"	f	class:Cinto
+HEROI_H	heroi.h	2;"	d
+Heroi	heroi.cpp	/^Heroi::Heroi()$/;"	f	class:Heroi
+Heroi	heroi.h	/^class Heroi : public Mob$/;"	c
+INIMIGO_H	inimigo.h	2;"	d
+Imprime	posicao.cpp	/^void Posicao::Imprime()$/;"	f	class:Posicao
+IncremQtd	cinto.cpp	/^void Cinto::IncremQtd()$/;"	f	class:Cinto
+Inimigo	inimigo.cpp	/^Inimigo::Inimigo()$/;"	f	class:Inimigo
+Inimigo	inimigo.h	/^class Inimigo : public Mob$/;"	c
+MAPA_H	mapa.h	2;"	d
+MOB_H	mob.h	2;"	d
+MOCHILA_H	mochila.h	2;"	d
+Mapa	mapa.cpp	/^Mapa::Mapa()$/;"	f	class:Mapa
+Mapa	mapa.cpp	/^Mapa::Mapa(std::string nome, int tam)$/;"	f	class:Mapa
+Mapa	mapa.h	/^class Mapa$/;"	c
+Mob	mob.cpp	/^Mob::Mob()$/;"	f	class:Mob
+Mob	mob.h	/^class Mob$/;"	c
+Mochila	mochila.h	/^class Mochila$/;"	c
+Muda	posicao.cpp	/^int Posicao::Muda(int x, int y)$/;"	f	class:Posicao
+NAO_ACHOU	cinto.cpp	/^const int NAO_ACHOU = -1;$/;"	v
+NIVEL_H	nivel.h	2;"	d
+Nivel	nivel.cpp	/^Nivel::Nivel()$/;"	f	class:Nivel
+Nivel	nivel.h	/^class Nivel$/;"	c
+PILHA_H	pilha.h	2;"	d
+POCAO_H	pocao.h	2;"	d
+POSICAO_H	posicao.h	2;"	d
+Pilha	pilha.h	/^class Pilha$/;"	c
+Pocao	pocao.cpp	/^Pocao::Pocao()$/;"	f	class:Pocao
+Pocao	pocao.cpp	/^Pocao::Pocao(int efeito)$/;"	f	class:Pocao
+Pocao	pocao.h	/^class Pocao : public Elemento$/;"	c
+Posicao	posicao.cpp	/^Posicao::Posicao() {}$/;"	f	class:Posicao
+Posicao	posicao.cpp	/^Posicao::Posicao(int x, int y)$/;"	f	class:Posicao
+Posicao	posicao.h	/^class Posicao$/;"	c
+RemoverPocao	cinto.cpp	/^Pocao Cinto::RemoverPocao(int ind)$/;"	f	class:Cinto
+Render	tela.cpp	/^void Tela::Render(Mapa mapa)$/;"	f	class:Tela
+TELA_H	tela.h	2;"	d
+Tela	tela.cpp	/^Tela::Tela()$/;"	f	class:Tela
+Tela	tela.h	/^class Tela$/;"	c
+UsarEfeito	pocao.cpp	/^int Pocao::UsarEfeito(int pontos)$/;"	f	class:Pocao
+UsarElemento	heroi.cpp	/^int Heroi::UsarElemento(Elemento elem)$/;"	f	class:Heroi
+VAZIO	casa.cpp	/^const int VAZIO = 0;$/;"	v
+armaEqp	heroi.h	/^		Arma armaEqp;$/;"	m	class:Heroi
+ataque	arma.h	/^		int ataque;$/;"	m	class:Arma
+ataque	mob.h	/^		int ataque;$/;"	m	class:Mob
+casas	mapa.h	/^		std::vector< std::vector<Casa> > casas;$/;"	m	class:Mapa
+cinto	heroi.h	/^		Cinto cinto;$/;"	m	class:Heroi
+defesa	mob.h	/^		int defesa;$/;"	m	class:Mob
+efeito	pocao.h	/^		int efeito;$/;"	m	class:Pocao
+elemento	casa.h	/^		Elemento elemento;$/;"	m	class:Casa
+estado	casa.h	/^		int estado;$/;"	m	class:Casa
+getArmaEqp	heroi.cpp	/^Arma Heroi::getArmaEqp()$/;"	f	class:Heroi
+getAtaque	mob.cpp	/^int Mob::getAtaque()$/;"	f	class:Mob
+getCasa	mapa.cpp	/^std::vector<std::vector<Casa> > Mapa::getCasa()$/;"	f	class:Mapa
+getCinto	heroi.cpp	/^Cinto Heroi::getCinto()$/;"	f	class:Heroi
+getDefesa	mob.cpp	/^int Mob::getDefesa()$/;"	f	class:Mob
+getEfeito	pocao.cpp	/^int Pocao::getEfeito()$/;"	f	class:Pocao
+getElemento	casa.cpp	/^Elemento Casa::getElemento()$/;"	f	class:Casa
+getEstado	casa.cpp	/^int Casa::getEstado()$/;"	f	class:Casa
+getInimigo	casa.cpp	/^Inimigo Casa::getInimigo()$/;"	f	class:Casa
+getMapa	nivel.cpp	/^Mapa Nivel::getMapa()$/;"	f	class:Nivel
+getNome	elemento.cpp	/^std::string Elemento::getNome()$/;"	f	class:Elemento
+getNome	mapa.cpp	/^std::string Mapa::getNome()$/;"	f	class:Mapa
+getNome	mob.cpp	/^std::string Mob::getNome()$/;"	f	class:Mob
+getPeso	elemento.cpp	/^int Elemento::getPeso()$/;"	f	class:Elemento
+getPocoes	cinto.cpp	/^Pocao Cinto::getPocoes()$/;"	f	class:Cinto
+getPos	mob.cpp	/^Posicao Mob::getPos()$/;"	f	class:Mob
+getPosSaida	mapa.cpp	/^Posicao Mapa::getPosSaida()$/;"	f	class:Mapa
+getQtd	cinto.cpp	/^int Cinto::getQtd()$/;"	f	class:Cinto
+getSprite	casa.cpp	/^char Casa::getSprite()$/;"	f	class:Casa
+getTam	mapa.cpp	/^int Mapa::getTam()$/;"	f	class:Mapa
+getVida	mob.cpp	/^int Mob::getVida()$/;"	f	class:Mob
+getX	posicao.cpp	/^int Posicao::getX()$/;"	f	class:Posicao
+getY	posicao.cpp	/^int Posicao::getY()$/;"	f	class:Posicao
+inimigo	casa.h	/^		Inimigo inimigo;$/;"	m	class:Casa
+main	main.cpp	/^int main(void)$/;"	f
+mapa	nivel.h	/^		Mapa mapa;$/;"	m	class:Nivel
+nome	elemento.h	/^		std::string nome;$/;"	m	class:Elemento
+nome	mapa.h	/^		std::string nome;$/;"	m	class:Mapa
+nome	mob.h	/^		std::string nome;$/;"	m	class:Mob
+objs	makefile	/^objs = posicao.o main.o casa.o  mob.o \\$/;"	m
+peso	elemento.h	/^		int peso;$/;"	m	class:Elemento
+pocoes	cinto.h	/^		Pocao pocoes[5];$/;"	m	class:Cinto
+pos	mob.h	/^		Posicao pos;$/;"	m	class:Mob
+posEntrada	mapa.h	/^		Posicao posEntrada;$/;"	m	class:Mapa
+posSaida	mapa.h	/^		Posicao posSaida;$/;"	m	class:Mapa
+qtd	cinto.h	/^		int qtd;$/;"	m	class:Cinto
+setArmaEqp	heroi.cpp	/^void Heroi::setArmaEqp(Arma arma)$/;"	f	class:Heroi
+setAtaque	mob.cpp	/^void Mob::setAtaque(int atq)$/;"	f	class:Mob
+setCinto	heroi.cpp	/^void Heroi::setCinto(Cinto cin)$/;"	f	class:Heroi
+setDefesa	mob.cpp	/^void Mob::setDefesa(int def)$/;"	f	class:Mob
+setEfeito	pocao.cpp	/^void Pocao::setEfeito(int ef)$/;"	f	class:Pocao
+setElemento	casa.cpp	/^void Casa::setElemento(Elemento elem)$/;"	f	class:Casa
+setEstado	casa.cpp	/^void Casa::setEstado(int est)$/;"	f	class:Casa
+setInimigo	casa.cpp	/^void Casa::setInimigo(Inimigo inim)$/;"	f	class:Casa
+setNome	elemento.cpp	/^void Elemento::setNome(std::string str)$/;"	f	class:Elemento
+setNome	mapa.cpp	/^void Mapa::setNome(std::string nome)$/;"	f	class:Mapa
+setNome	mob.cpp	/^void Mob::setNome(std::string str)$/;"	f	class:Mob
+setPeso	elemento.cpp	/^void Elemento::setPeso(int p)$/;"	f	class:Elemento
+setPocoes	cinto.cpp	/^void Cinto::setPocoes(Pocao poc, int ind)$/;"	f	class:Cinto
+setPosSaida	mapa.cpp	/^void Mapa::setPosSaida(Posicao pos)$/;"	f	class:Mapa
+setQtd	cinto.cpp	/^void Cinto::setQtd(int qtd)$/;"	f	class:Cinto
+setSprite	casa.cpp	/^void Casa::setSprite(char sprite)$/;"	f	class:Casa
+setTam	mapa.cpp	/^void Mapa::setTam(int tam)$/;"	f	class:Mapa
+setVida	mob.cpp	/^void Mob::setVida(int v)$/;"	f	class:Mob
+setX	posicao.cpp	/^void Posicao::setX(int nx)$/;"	f	class:Posicao
+setY	posicao.cpp	/^void Posicao::setY(int ny)$/;"	f	class:Posicao
+sprite	casa.h	/^		char sprite; \/* Responsável pela representação gráfica da casa *\/$/;"	m	class:Casa
+tam	mapa.h	/^		int tam;$/;"	m	class:Mapa
+tipo	inimigo.h	/^		int tipo;$/;"	m	class:Inimigo
+vida	mob.h	/^		int vida;$/;"	m	class:Mob
+x	posicao.h	/^		int x;$/;"	m	class:Posicao
+y	posicao.h	/^		int y;$/;"	m	class:Posicao

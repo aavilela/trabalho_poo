@@ -72,3 +72,11 @@ Arma Pilha::Desempilha()
 	}
 }
 
+void Pilha::Imprimir()
+{
+	for(int i = 0; i < topo + 1; i++)
+	{
+		std::cout << armas[i].getNome() << std::endl;
+	}
+	std::cout << std::endl;
+}

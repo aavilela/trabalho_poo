@@ -9,7 +9,7 @@
 class Heroi : public Mob
 {
 	public:
-		Heroi(); 
+		Heroi(std::string); 
 		int UsarElemento(Elemento);
 
 		char getSprite();

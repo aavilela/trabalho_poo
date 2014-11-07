@@ -3,6 +3,7 @@
 
 #include "elemento.h"
 
+extern const int VAZIA;
 extern const int CURA;
 extern const int AUM_ATAQUE;
 extern const int AUM_DEFESA; 
@@ -12,7 +13,7 @@ class Pocao : public Elemento
 	public:
 		Pocao();
 		Pocao(int);
-		//std::string TrataEfeito(int);
+		std::string TrataEfeito();
 		
 		/* Efeitos */
 		int UsarEfeito(int);

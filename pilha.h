@@ -15,6 +15,7 @@ class Pilha
 		bool Vazia();
 		void Empilha(Arma);
 		Arma Desempilha();
+		void Imprimir();
 	private:
 		Arma *armas;
 		int topo, capacidade;

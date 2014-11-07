@@ -9,6 +9,7 @@ class Mapa
 {
 	public:
 		Mapa();
+		Mapa(int);
 		Mapa(std::string, int);
 		int GeraMapa();
 		void GeraSaida();

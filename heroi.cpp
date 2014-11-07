@@ -1,7 +1,8 @@
 #include "heroi.h"
 
-Heroi::Heroi() 
+Heroi::Heroi(std::string nome) 
 {	
+	setNome(nome);
 	Arma espada;
 	espada.setAtaque(15);
 	setArmaEqp(espada);	
@@ -25,7 +26,7 @@ void Heroi::setSprite(char sprite)
 
 Cinto Heroi::getCinto()
 {
-	return cinto;
+	return this->cinto;
 }
 
 void Heroi::setCinto(Cinto cin)

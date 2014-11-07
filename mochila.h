@@ -11,6 +11,7 @@ class Mochila
 		Mochila();
 		void Add(Arma);
 		Arma Remove();
+		void Imprimir();
 
 		int getPeso();
 		void setPeso(int);

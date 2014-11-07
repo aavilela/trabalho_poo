@@ -15,8 +15,9 @@ class Cinto
 		int CheckDisp(int);
 		void DecremQtd();
 		void IncremQtd();
+		void Imprimir();
 
-		Pocao getPocoes();
+		Pocao getPocoes(int);
 		void setPocoes(Pocao, int);
 		int getQtd();
 		void setQtd(int);

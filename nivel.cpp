@@ -7,7 +7,17 @@
 
 Nivel::Nivel()
 {
-	// ctor
+	
+}
+
+void Nivel::GeraInimigos()
+{
+	int tam = mapa.getTam();
+
+	for(int i = 0; i < 5; i++)
+	{
+		//Posicao pos(i * 2, i *5);
+	}
 }
 
 Mapa Nivel::getMapa()
@@ -15,4 +25,8 @@ Mapa Nivel::getMapa()
 	return mapa;
 }
 
+void Nivel::setMapa(Mapa mapa)
+{
+	this->mapa = mapa;
+}
 
